@@ -1,0 +1,13 @@
+{
+  "name": "schedule-table",
+  "version": "0.0.1",
+  "main": "gulpfile.js",
+  "author": "Makoto Kudo",
+  "dependencies": {
+    "gulp": "^3.8.10",
+    "gulp-less": "^2.0.1"
+  },
+  "scripts": {
+    "build": "gulp"
+  }
+}

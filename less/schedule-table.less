@@ -1,0 +1,78 @@
+@darkPrimaryColor:   #F57C00;
+@primaryColor:       #FF9800;
+@lightPrimaryColor:  #FFE0B2;
+@textPrimaryColor:   #212121;
+@accentColor:        #9E9E9E;
+@primaryTextColor:   #212121;
+@secondaryTextColor: #727272;
+@dividerColor:       #B6B6B6;
+
+.st-cell-size() {
+	box-sizing: border-box;
+	width: 200px;
+	height: 30px;
+	padding: 5px 10px;
+}
+
+.st {
+	font-size: 12px;
+	color: @primaryTextColor;
+
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	.st-column {
+		float: left;
+
+		&:nth-child(2) {
+			.st-cell {
+				border-width: 1px 1px 0 1px;
+				&:last-child {
+					border-width: 1px;
+				}
+			}
+		}
+
+		.st-cell {
+			.st-cell-size;
+
+			border-style: dashed solid;
+			border-width: 1px 1px 0 0;
+			border-color: @dividerColor;
+
+			&.st-cell-just {
+				border-style: solid;
+			}
+
+			&:last-child {
+				border-width: 1px 1px 1px 0;
+				border-bottom-style: solid;
+			}
+		}
+
+		.st-cell-title {
+			.st-cell-size;
+			margin-bottom: 10px;
+			text-align: center;
+			line-height: 28px;
+			color: @primaryColor;
+		}
+
+		.st-cell-scale-title {
+			.st-cell-size;
+			width: 100px;
+			margin-bottom: 10px;
+			border: none;
+		}
+
+		.st-cell-scale {
+			.st-cell-size;
+			width: 100px;
+			padding-top: 0px;
+			border: none;
+		}
+	}
+}
