@@ -7,6 +7,10 @@
   display: block;
   clear: both;
 }
+.st .st-header {
+  white-space: nowrap;
+  letter-spacing: -0.4em;
+}
 .st .st-header .st-title-scale {
   box-sizing: border-box;
   width: 200px;
@@ -15,66 +19,40 @@
   width: 100px;
   margin-bottom: 10px;
   border: none;
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
 }
 .st .st-header .st-title {
   box-sizing: border-box;
   width: 200px;
   height: 30px;
   padding: 5px 10px;
-  float: left;
+  display: inline-block;
   margin-bottom: 10px;
   text-align: center;
-  line-height: 28px;
   color: #ff5722;
   font-size: 16px;
+  letter-spacing: normal;
 }
 .st .st-header:after {
   content: '';
   display: block;
   clear: both;
 }
-.st .st-schedule {
-  position: absolute;
-  box-sizing: border-box;
-  width: 200px;
-  padding: 5px 10px;
-  background-color: #2196F3;
-  color: #fff;
-  border: 2px solid #1976D2;
+.st .st-columns {
+  white-space: nowrap;
 }
-.st .st-schedule .label {
-  background-color: #fff;
-  color: #2196F3;
-  text-align: center;
-  border-radius: 2px;
-  margin: 2px 0;
-  padding: 2px 0;
-}
-.st .st-schedule .content {
-  margin: 2px;
-}
-.st .st-schedule.red {
-  background-color: #F44336;
-  border-color: #D32F2F;
-}
-.st .st-schedule.red .label {
-  color: #F44336;
-}
-.st .st-draggable {
-  position: relative;
+.st .st-columns .st-column {
   display: inline-block;
+  vertical-align: middle;
 }
-.st .st-column {
-  float: left;
-}
-.st .st-column:nth-child(1) .st-cell {
+.st .st-columns .st-column:nth-child(1) .st-cell {
   border-width: 1px 1px 0 1px;
 }
-.st .st-column:nth-child(1) .st-cell:last-child {
+.st .st-columns .st-column:nth-child(1) .st-cell:last-child {
   border-width: 1px;
 }
-.st .st-column .st-cell {
+.st .st-columns .st-column .st-cell {
   box-sizing: border-box;
   width: 200px;
   height: 30px;
@@ -83,34 +61,14 @@
   border-width: 1px 1px 0 0;
   border-color: #b6b6b6;
 }
-.st .st-column .st-cell.st-cell-just {
+.st .st-columns .st-column .st-cell.st-cell-just {
   border-style: solid;
 }
-.st .st-column .st-cell:last-child {
+.st .st-columns .st-column .st-cell:last-child {
   border-width: 1px 1px 1px 0;
   border-bottom-style: solid;
 }
-.st .st-column .st-cell-title {
-  box-sizing: border-box;
-  width: 200px;
-  height: 30px;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  line-height: 28px;
-  color: #ff5722;
-  font-size: 16px;
-}
-.st .st-column .st-cell-scale-title {
-  box-sizing: border-box;
-  width: 200px;
-  height: 30px;
-  padding: 5px 10px;
-  width: 100px;
-  margin-bottom: 10px;
-  border: none;
-}
-.st .st-column .st-cell-scale {
+.st .st-columns .st-column .st-cell-scale {
   box-sizing: border-box;
   width: 200px;
   height: 30px;
@@ -118,4 +76,35 @@
   width: 100px;
   padding-top: 0px;
   border: none;
+}
+.st .st-columns .st-draggable {
+  position: relative;
+  display: inline-block;
+}
+.st .st-columns .st-draggable .st-schedule {
+  position: absolute;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 5px 10px;
+  background-color: #2196F3;
+  color: #fff;
+  border: 2px solid #1976D2;
+}
+.st .st-columns .st-draggable .st-schedule .label {
+  background-color: #fff;
+  color: #2196F3;
+  text-align: center;
+  border-radius: 2px;
+  margin: 2px 0;
+  padding: 2px 0;
+}
+.st .st-columns .st-draggable .st-schedule .content {
+  margin: 2px;
+}
+.st .st-columns .st-draggable .st-schedule.red {
+  background-color: #F44336;
+  border-color: #D32F2F;
+}
+.st .st-columns .st-draggable .st-schedule.red .label {
+  color: #F44336;
 }
