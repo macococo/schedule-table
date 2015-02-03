@@ -1,7 +1,7 @@
-@darkPrimaryColor:   #F57C00;
-@primaryColor:       #FF9800;
-@lightPrimaryColor:  #FFE0B2;
-@textPrimaryColor:   #212121;
+@darkPrimaryColor:   #E64A19;
+@primaryColor:       #FF5722;
+@lightPrimaryColor:  #FFCCBC;
+@textPrimaryColor:   #FFFFFF;
 @accentColor:        #9E9E9E;
 @primaryTextColor:   #212121;
 @secondaryTextColor: #727272;
@@ -24,10 +24,72 @@
 		clear: both;
 	}
 
+	.st-header {
+		.st-title-scale {
+			.st-cell-size;
+			width: 100px;
+			margin-bottom: 10px;
+			border: none;
+			float: left;
+		}
+		.st-title {
+			.st-cell-size;
+			float: left;
+			margin-bottom: 10px;
+			text-align: center;
+			line-height: 28px;
+			color: @primaryColor;
+			font-size: 16px;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+
+	.st-schedule {
+		position: absolute;
+		box-sizing: border-box;
+		width: 200px;
+		padding: 5px 10px;
+		background-color: #2196F3;
+		color: #fff;
+		border: 2px solid #1976D2;
+
+		.label {
+			background-color: #fff;
+			color: #2196F3;
+			text-align: center;
+			border-radius: 2px;
+			margin: 2px 0;
+			padding: 2px 0;
+		}
+
+		.content {
+			margin: 2px;
+		}
+
+		&.red {
+			background-color: #F44336;
+			border-color: #D32F2F;
+
+			.label {
+				color: #F44336;
+			}
+		}
+	}
+
+	.st-draggable {
+		position: relative;
+		display: inline-block;
+	}
+
 	.st-column {
 		float: left;
 
-		&:nth-child(2) {
+		&:nth-child(1) {
 			.st-cell {
 				border-width: 1px 1px 0 1px;
 				&:last-child {
@@ -51,21 +113,6 @@
 				border-width: 1px 1px 1px 0;
 				border-bottom-style: solid;
 			}
-		}
-
-		.st-cell-title {
-			.st-cell-size;
-			margin-bottom: 10px;
-			text-align: center;
-			line-height: 28px;
-			color: @primaryColor;
-		}
-
-		.st-cell-scale-title {
-			.st-cell-size;
-			width: 100px;
-			margin-bottom: 10px;
-			border: none;
 		}
 
 		.st-cell-scale {
